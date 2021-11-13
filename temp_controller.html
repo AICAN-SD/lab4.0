@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/temp_controller.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/temp_controller.css" />
+    <title>ProtoLab</title>
+  </head>
+  <body>
+    <div class="main">
+      <!-- navbar start -->
+      <div class="mynav row">
+        <div
+          style="
+            border-right: 1px dotted black;
+            background: #9037c7;
+            color: white;
+            border-radius: 34px 0px 0px 34px;
+          "
+          class="d-flex justify-content-center col-5 navtext"
+        >
+          Temperature Controller
+        </div>
+        <div
+          style="border-right: 1px dotted black; color: #9037c7"
+          class="d-flex justify-content-center col-2 navtext"
+        >
+          Tune
+        </div>
+        <div
+          style="
+            border-left: 1px dotted black;
+            border-right: 1px dotted black;
+            color: #9037c7;
+          "
+          class="d-flex justify-content-center col-2 navtext"
+        >
+          Log
+        </div>
+        <div
+          style="color: #9037c7"
+          class="d-flex justify-content-center col-3 navtext"
+        >
+          Alarm
+        </div>
+      </div>
+      <!-- navbar end -->
+      <!-- mode selection -->
+      <div class="d-flex justify-content-end row mt-4">
+        <div class="col-1 mt-2">
+          <h4
+            style="
+              font-family: roboto, sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              color: #9037c7;
+            "
+          >
+            Mode
+          </h4>
+        </div>
+        <div class="col-4">
+          <select
+          class="selectmode"
+          name="modes" id="modes" form="modes">
+            <option value="Regular">Regular</option>
+            <option value="Timer">Timer</option>
+          </select>
+        </div>
+      </div>
+      <!-- mode selection end-->
+      <div class="d-flex justify-content-center row mt-5">
+         <!-- temp card -->
+        <div style="padding-left: 100px;" class="pt-3 col-6 temp_card mx-4">
+          <h3 style="font-weight: bold;font-size: 58px;" class="temp_cardtext">23°C</h3>
+          <p style="font-weight: normal; font-size: 24px;" class="temp_cardtext">Temperature 1</p>
+          <h3 style="font-weight: bold;font-size: 58px;" class="temp_cardtext">23°C</h3>
+          <p style="font-weight: normal; font-size: 24px;" class="temp_cardtext">Temperature 2</p>
+        </div>
+         <!-- temp card end-->
+          <!-- set temp card -->
+        <div class="col-6 temp_gaugecard">
+          <div class="row p-5">
+            <div class="col-6">
+              half donut
+            </div>
+          <div class="col-6 d-flex justify-content-center mt-5">
+            <button class="timer_set">Set</button>
+          </div>
+          </div>
+        </div>
+         <!--set temp card end-->
+      </div>
+      <!--timer cards-->
+      <div class="d-flex justify-content-center row mt-5">
+        <div class="col-12 timer_box p-3">
+          <div class="row">
+            <div class="col-4 p-5">
+              <form action="">
+                <input class="date_input my-1" type="date" id="startdate" name="start">
+                <h4 style="font-weight: normal; font-size: 24px;" class="temp_cardtext d-flex justify-content-center"> start date</h4>
+                <input class="date_input my-1" type="date" id="enddate" name="end">
+                <h4 style="font-weight: normal; font-size: 24px;" class="temp_cardtext d-flex justify-content-center"> End date</h4>
+              </form>
+            </div>
+            <div class="col-4 p-5">
+              <form action="">
+                <h3 style="font-weight: bold; font-size: 36px;" class="temp_cardtext d-flex justify-content-center" >03:43:34 </h3>
+                <h4 style="font-weight: normal; font-size: 24px;" class="temp_cardtext d-flex justify-content-center"> start date</h4>
+                <h3 style="font-weight: bold; font-size: 36px;" class="temp_cardtext d-flex justify-content-center" >--:--:-- </h3>
+                <h4 style="font-weight: normal; font-size: 24px;" class="temp_cardtext d-flex justify-content-center"> End date</h4>
+              </form>
+            </div>
+            <div class="col-4">
+              <h4 style="font-weight: normal; font-size: 24px;" class="temp_cardtext d-flex justify-content-center">Device Status
+                <i style="color: #1AFF83;font-size: 24px;margin-left: 20px;" class="fas fa-circle mt-1"></i>
+              </h4>
+              <button style="margin-top: 80px; margin-left: 40px;" class="timer_start">Start</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

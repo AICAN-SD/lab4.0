@@ -1,0 +1,94 @@
+@import url("https://use.typekit.net/vug8pnv.css");
+
+body {
+  background: #e5e5e5;
+  padding: 30px;
+}
+.main {
+  padding: 35px;
+  height: 834px;
+  background: white;
+  border-radius: 30px;
+}
+.mynav {
+  height: 49px;
+  padding: 3px;
+  width: 70%;
+  background: violet;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 34px;
+}
+.navtext {
+  font-family: roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+}
+.temp_card {
+  width: 354px;
+  height: 274px;
+  background: #ffffff;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+.temp_cardtext {
+  font-family: droid-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #9d9d9d;
+}
+.temp_gaugecard {
+  width: 478px;
+  height: 274px;
+  background: #ffffff;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+.timer_box {
+  width: 860px;
+  height: 270px;
+  background: #ffffff;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+.timer_set {
+  color: white;
+  border-color: white;
+  width: 157px;
+  height: 50px;
+  background: #3cea43;
+  border-radius: 34px;
+}
+.timer_start {
+  color: white;
+  border-color: white;
+  width: 157px;
+  height: 50px;
+  background: #9037c7;
+  border-radius: 34px;
+}
+.date_input {
+  text-align: center;
+  width: 224px;
+  height: 45px;
+  background: #ffffff;
+  border: white;
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+.selectmode {
+  text-align: center;
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  border: 0;
+  width: 224px;
+  height: 45px;
+  color: #9037c7;
+  background: #ffffff;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}

@@ -1,0 +1,51 @@
+@import url("https://use.typekit.net/vug8pnv.css");
+
+body {
+    background: #e5e5e5;
+    padding: 30px;
+  }
+  .main {
+    padding: 35px;
+    height: 834px;
+    background: white;
+    border-radius: 30px;
+  }
+  .mynav {
+    padding: 3px;
+    width: 60%;
+    height: 49px;
+    background: violet;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 34px;
+  }
+  .navtext {
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .log_graph{
+    width: 583px;
+    height: 298px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 15px 15px 3px 15px;
+  }
+  .button{
+    width: 157px;
+  height: 50px;
+  color: white;
+  border-color: white;
+  background: #3CEA43;
+  border-radius: 34px;
+  }
+  .mytable{
+    width: 844px;
+  height: 305px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  }

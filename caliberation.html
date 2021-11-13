@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+          integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+          integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+          crossorigin="anonymous"
+        ></script>
+        <link
+          rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" type="text/css" href="css/caliberation.css" />
+        <title>ProtoLab</title>
+      </head>
+<body>
+    <div class="main">
+        <!-- navbar start -->
+      <div class="mynav row">
+        <div
+          style="
+            border-right: 1px dotted black;
+            color: #9037c7;
+            border-radius: 34px 0px 0px 34px;"
+          class="d-flex justify-content-center col-3 navtext">
+          pH Monitor
+        </div>
+        <div
+          style="border-right: 1px dotted black;color: white;background: #9037c7;border-radius: 10px"
+          class="d-flex justify-content-center col-4 navtext">
+          Caliberation
+        </div>
+        <div
+          style="border-left: 1px dotted black; border-right: 1px dotted black; color: #9037c7"
+          class="d-flex justify-content-center col-2 navtext">
+          Log
+        </div>
+        <div
+          style="color: #9037c7"
+          class="d-flex justify-content-center col-3 navtext">
+          Alarm
+        </div>
+      </div>
+      <!-- navbar end -->
+      <div class="d-flex justify-content-center">
+      <div class="row mt-5 pl-5">
+            <!-- ph card start -->
+          <div class="col-6 ph_box p-3 px-5">
+              <div class="row">
+                <div class="col-2">
+                    <svg
+                      width="18"
+                      height="158"
+                      viewBox="0 0 18 158"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect width="18" height="158" rx="9" fill="#3CEA43" />
+                    </svg>
+                  </div>
+                  <div class="col-10">
+                    <div class="row">
+                      <h5 class="phtext mt-2">pH</h5>
+                    </div>
+                    <div class="row"><div class="ph_value mt-1">7.55</div></div>
+                  </div>
+              </div>
+          </div>
+          <!-- ph card end -->
+            <!-- temp card start -->
+          <div class="col-3 temp_card">
+            <div class="temp_utext d-flex justify-content-center">Temperature</div>
+            <h3 class="temp_ltext d-flex justify-content-center">23°C</h3>
+          </div>
+          <!-- temp card start -->
+          <!-- volt card end -->
+          <div class="col-3 temp_card">
+            <div class="temp_utext d-flex justify-content-center">Voltage</div>
+            <h3 class="temp_ltext d-flex justify-content-center">4mV</h3>
+          </div>
+          <!-- volt card end -->
+      </div>
+    </div>
+      <div class="row input_row mt-4">
+        <button class="button" style="background: #9037C7; margin-right: 10px;">Start</button>
+        <button class="button" style="background: #3CEA43; margin-right: 30px;">Save</button>
+        <div class="col mt-2">
+          <form action="#">
+            <label style="font-family: roboto, sans-serif;font-style: normal;font-weight: 500;font-size: 24px;line-height: 28px;color: #9037C7;" for="cars">Mode </label>
+            <select class="mode" name="cars" id="cars">
+              <option value=""></option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <!-- ph table start -->
+      <div class="d-flex justify-content-center">
+      <div class="row mytable mt-4">
+        <table class=" table table-striped">
+          <thead>
+            <tr>
+              <th style="text-align: center;" scope="col">pH</th>
+              <th style="text-align: center;" scope="col">mV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      <!-- ph table end -->
+    </div>  
+</body>
+</html>
