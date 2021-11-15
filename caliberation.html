@@ -39,22 +39,22 @@
             color: #9037c7;
             border-radius: 34px 0px 0px 34px;"
           class="d-flex justify-content-center col-3 navtext">
-          pH Monitor
+          <a style="color: inherit;text-decoration: none !important;" href="phmonitor.html">pH Monitor</a> 
         </div>
         <div
           style="border-right: 1px dotted black;color: white;background: #9037c7;border-radius: 10px"
           class="d-flex justify-content-center col-4 navtext">
-          Caliberation
+          <a style="color: inherit;text-decoration: none !important;" href="caliberation.html">Caliberation</a>
         </div>
         <div
           style="border-left: 1px dotted black; border-right: 1px dotted black; color: #9037c7"
           class="d-flex justify-content-center col-2 navtext">
-          Log
+          <a style="color: inherit;text-decoration: none !important;" href="Log.html">Log</a>
         </div>
         <div
           style="color: #9037c7"
           class="d-flex justify-content-center col-3 navtext">
-          Alarm
+          <a style="color: inherit;text-decoration: none !important;" href="alarm.html">Alarm</a>
         </div>
       </div>
       <!-- navbar end -->
@@ -97,23 +97,42 @@
       </div>
     </div>
       <div class="row input_row mt-4">
-        <button class="button" style="background: #9037C7; margin-right: 10px;">Start</button>
+        <button onclick="togglebutton()" class="button start" id="startb">Start</button>
         <button class="button" style="background: #3CEA43; margin-right: 30px;">Save</button>
         <div class="col mt-2">
           <form action="#">
-            <label style="font-family: roboto, sans-serif;font-style: normal;font-weight: 500;font-size: 24px;line-height: 28px;color: #9037C7;" for="cars">Mode </label>
-            <select class="mode" name="cars" id="cars">
-              <option value=""></option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
+            <label style="font-family: roboto, sans-serif;font-style: normal;font-weight: 500;font-size: 24px;line-height: 28px;color: #9037C7;" for="ph_cali">Mode </label>
+            <select onchange="tableChange()" style="text-align: center;" class="mode" name="ph_cali" id="ph_cali">
+              <option value="2point">2 point</option>
+              <option value="3point">3 point</option>
+              <option value="5point">5 point</option>
             </select>
           </form>
         </div>
       </div>
       <!-- ph table start -->
       <div class="d-flex justify-content-center">
-      <div class="row mytable mt-4">
+        <div id="point2" class="row mytable mt-4">
+          <table class=" table table-striped">
+            <thead>
+              <tr>
+                <th style="text-align: center;" scope="col">pH</th>
+                <th style="text-align: center;" scope="col">mV</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center;">6</td>
+                <td style="text-align: center;">4</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">6</td>
+                <td style="text-align: center;">4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <div style="display: none;" id="point3" class="row mytable mt-4">
         <table class=" table table-striped">
           <thead>
             <tr>
@@ -137,8 +156,41 @@
           </tbody>
         </table>
       </div>
+      <div style="display: none;" id="point5" class="row mytable mt-4">
+        <table class=" table table-striped">
+          <thead>
+            <tr>
+              <th style="text-align: center;" scope="col">pH</th>
+              <th style="text-align: center;" scope="col">mV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">6</td>
+              <td style="text-align: center;">4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
       <!-- ph table end -->
-    </div>  
+    </div> 
+    <script src="js/caliberation.js"></script> 
 </body>
 </html>

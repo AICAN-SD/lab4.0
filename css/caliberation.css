@@ -81,6 +81,12 @@ height: 50px;
 border-color: white;
 border-radius: 34px;
 }
+.start{
+  background: #9037C7; margin-right: 10px;
+}
+.stop{
+  background: red; margin-right: 10px;
+}
 .input_row{
   width: 60%;
   margin: 0 auto;
