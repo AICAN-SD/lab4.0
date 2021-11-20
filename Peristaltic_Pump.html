@@ -41,7 +41,7 @@
             color: white;
             border-radius: 34px 0px 0px 34px;"
           class="col-4 navtext d-flex justify-content-center">
-          Perstaltic Pump
+          <a style="color: inherit;text-decoration: none !important;" href="Peristaltic_Pump.html">Perstaltic Pump</a>
         </div>
         <div
           style="border-right: 1px dotted black; color: #9037c7"
@@ -51,12 +51,12 @@
         <div
           style="border-right: 1px dotted black; color: #9037c7"
           class="d-flex justify-content-center col-2 navtext">
-          Job
+          <a style="color: inherit;text-decoration: none !important;" href="pump_job.html">Job</a>
         </div>
         <div
           style="color: #9037c7"
           class="d-flex justify-content-center col-3 navtext">
-          Alarm
+          <a style="color: inherit;text-decoration: none !important;" href="alarm_pump.html">Alarm</a>
         </div>
       </div>
       <!-- navbar end -->
@@ -97,13 +97,13 @@
           <div class="d-flex justify-content-center mt-5">
             <h3 style="font-size: 24px;font-weight: normal;" class="pump_text">Clockwise</h3>
             <label style="margin-left: 30px;" class="switch">
-            <input type="checkbox">
+            <input onchange="slide()" id="clock" type="checkbox" checked>
             <span class="slider round"></span>
           </label></div>
           <div class="d-flex justify-content-center mt-4">
             <h3 style="font-size: 24px;font-weight: normal;" class="pump_text">Anticlockwise</h3>
             <label style="margin-left: 30px;" class="switch">
-            <input type="checkbox">
+            <input onclick="slide()" id="anticlock" type="checkbox">
             <span class="slider round"></span>
           </label></div>
           <div class="d-flex justify-content-center mt-4">
@@ -112,5 +112,6 @@
         <!-- direction card end -->
       </div>
     </div>
+    <script src="js/pump.js"></script>
 </body>
 </html>

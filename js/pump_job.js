@@ -27,23 +27,16 @@ function includeHTML() {
   }
   includeHTML();
 
-  function changeTimer(){
-    var element = document.getElementById("timer");
-    var timer1 = document.getElementById("timer1")
-    var timer2 = document.getElementById("timer2")
-    if(element.value === "Regular"){
-        timer1.style.display = "block";
-        timer2.style.display = "none";
+  function changeJob(){
+    var element = document.getElementById("job");
+    var pump_timer = document.getElementById("pump_timer")
+    var pump_repeat = document.getElementById("pump_repeat")
+    if(element.value === "Timer"){
+        pump_timer.style.display = "block";
+        pump_repeat.style.display = "none";
     }
     else{
-        timer2.style.display = "block";
-        timer1.style.display = "none";
+        pump_repeat.style.display = "block";
+        pump_timer.style.display = "none";
     }
-  }
-
-  function setdate(){
-    var startdate1 = document.getElementById("startdate1")
-    var enddate1 = document.getElementById("enddate1")
-    var startdate2 = document.getElementById("startdate2")
-    var enddate2 = document.getElementById("enddate2")
   }
