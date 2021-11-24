@@ -143,7 +143,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: rotate(-135deg);
     margin-top: -9px;
 }
-/* sidebar */
 .nav-tabs--vertical {
     border-bottom: none;
     border-right: 1px solid #ddd;
@@ -157,12 +156,14 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: 0.25rem;
   }
   .nav-tabs--left .nav-link {
+    color: white;
     transition: border-color 0.125s ease-in;
     white-space: nowrap;
   }
   .nav-tabs--left .nav-link:hover {
+      color: white;
     background-color: inherit;
-    border-color: transparent;
+    border-color: inherit;
   }
   .nav-tabs--left .nav-link.active {
     border-bottom-color: black;
@@ -175,7 +176,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     background-color: inherit;
     border-color: #fff #9037C7 #fff #fff;
   }
-  .nav-link .active{
-    background-color: red;
+  .nav-tabs--left .nav-link:hover i,.nav-tabs--left .nav-link:hover h5{
+      color: white;
   }
-  
