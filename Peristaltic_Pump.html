@@ -296,16 +296,12 @@
        <h3 style="font-size: 24px;font-weight: 500;" class="d-flex justify-content-center pump_text">Direction</h3>
        <div class="d-flex justify-content-center mt-5">
          <h3 style="font-size: 24px;font-weight: normal;" class="pump_text">Clockwise</h3>
-         <label style="margin-left: 30px;" class="switch">
-         <input onchange="slide()" id="clock" type="checkbox" checked>
-         <span class="slider round"></span>
-       </label></div>
+         <div onclick="toggle()" id="mytoggle" style="margin-left: 30px;" class="toggle active"></div>
+      </div>
        <div class="d-flex justify-content-center mt-4">
          <h3 style="font-size: 24px;font-weight: normal;" class="pump_text">Anticlockwise</h3>
-         <label style="margin-left: 30px;" class="switch">
-         <input onclick="slide()" id="anticlock" type="checkbox">
-         <span class="slider round"></span>
-       </label></div>
+         <div onclick="toggle()" id="mytoggle2" style="margin-left: 30px;" class="toggle"></div>
+      </div>
        <div class="d-flex justify-content-center mt-4">
        <button class="start">Start</button></div>
      </div>
