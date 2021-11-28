@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
@@ -27,144 +27,397 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="css/phmonitor.css" />
-    <title>ProtoLab</title>
-  </head>
-  <body>
-    <div class="main">
-      <!-- navbar start -->
-      <div class="mynav row">
-        <div
-          style="
-            border-right: 1px dotted black;
-            background: #9037c7;
-            color: white;
-            border-radius: 34px 0px 0px 34px;"
-          class="col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="phmonitor.html">pH Monitor</a>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <!-- sidebar -->
+  <div id="sidebarMenu">
+    <div class="d-flex flex-row mt-2">
+      <ul
+      class="nav nav-tabs nav-tabs--vertical nav-tabs--left"
+      role="navigation"
+    >
+    <li class="nav-item">
+      <a
+      id = "link4"
+        href="Dashboard.html"
+        class="nav-link pt-3"
+        data-toggle="tab"
+        role="tab"
+        aria-controls="ipsum"
+        >
+        <i style="font-size: 60px;" class="fas fa-home"></i>
+        <h5 class="d-flex justify-content-center mt-2">Home</h5></a
+      >
+    </li>
+      <li onclick="devices()" class="nav-item">
+        <a
+        id = "link1"
+          href="#lorem"
+          class="nav-link active pt-3"
+          data-toggle="tab"
+          role="tab"
+          aria-controls="lorem"
+          >
+          <i style="font-size: 60px;" class="fas fa-layer-group"></i>
+          <h5 class="d-flex justify-content-center mt-2">Devices</h5>
+          </a
+        >
+      </li>
+      <li onclick="setting()"class="nav-item">
+        <a
+        id = "link2"
+          href="#ipsum"
+          class="nav-link pt-3"
+          data-toggle="tab"
+          role="tab"
+          aria-controls="ipsum"
+          >
+          <i style="font-size: 60px;" class="fas fa-cogs"></i>
+          <h5 class="d-flex justify-content-center mt-2">Settings</h5></a
+        >
+      </li>
+      <li onclick="setup()" class="nav-item">
+        <a
+        id = "link3"
+          href="#sit-amet"
+          class="nav-link pt-3"
+          data-toggle="tab"
+          role="tab"
+          aria-controls="sit-amet"
+          >
+          <i style="font-size: 60px;" class="fas fa-signal"></i>
+          <h5 class="d-flex justify-content-center mt-2">Setup</h5> </a
+        >
+      </li>
+    </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="device_c" role="tabpanel">
+          <div style="padding: 20px;" class="row">
+            <div class="col-3 mx-3">
+              <a style="color: inherit;text-decoration: none !important;" href="Peristaltic_Pump.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Peristaltic Pump
+              </h4>
+            </a>
+            </div>
+            <div class="col-3 mx-5">
+              <a style="color: inherit;text-decoration: none !important;" href="temp_c.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Temp. Controller
+              </h4>
+              </a>
+            </div>
+            <div class="col-3 mx-4">
+              <a style="color: inherit;text-decoration: none !important;" href="temp_c.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Temp. Controller
+              </h4>
+              </a>
+            </div>
+            <div class="col-4 mx-2 mt-3">
+              <a style="color: inherit;text-decoration: none !important;" href="phmonitor.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+              Ph. Controller
+              </h4>
+            </a>
+            </div>
+            <div class="col-3 mt-3">
+              <i style="font-size: 150px;color: white;" class="far fa-plus-square"></i>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Add Devices
+              </h4>
+            </div>
+          </div>
         </div>
-        <div
-          style="border-right: 1px dotted black; color: #9037c7"
-          class="col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="caliberation.html">Caliberation</a>
+        <div class="tab-pane fade" id="setting_c" role="tabpanel">
+          <h1 style="color: white;">Settings</h1>
+
+          <p style="color: white;">
+            Aenean pharetra risus quis placerat euismod. Praesent mattis lorem
+            eget massa euismod sollicitudin. Donec porta nulla ut blandit
+            vehicula. Mauris sagittis lorem nec mauris placerat, et molestie
+            elit vehicula. Donec libero ex, condimentum et mi dapibus, euismod
+            ornare ligula.
+          </p>
+
+          <p style="color: white;">
+            In faucibus tempus ante, et tempor magna luctus id. Ut a maximus
+            ipsum. Duis eu velit nec libero pretium pellentesque. Maecenas
+            auctor hendrerit pulvinar. Donec sed tortor interdum, sodales elit
+            vel, tempor turpis. In tristique vestibulum eros vel congue. Vivamus
+            maximus posuere fringilla. Nullam in est commodo, tristique ligula
+            eu, tincidunt enim. Duis iaculis sodales lectus vitae cursus.
+          </p>
         </div>
-        <div
-          style="border-right: 1px dotted black; color: #9037c7"
-          class="d-flex justify-content-center col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="Log.html">Log</a>
+        <div class="tab-pane fade" id="setup_c" role="tabpanel">
+          <h1 style="color: white;">Setup</h1>
+
+          <p style="color: white;">
+            Ut eget lectus tristique, tempus purus sit amet, porta augue. Mauris
+            lobortis sem nec augue ultricies blandit. Nullam sed sem venenatis,
+            pretium urna eget, scelerisque dolor. Morbi nec volutpat leo, quis
+            faucibus tortor. Aenean vel rutrum mauris. Pellentesque lectus
+            massa, tincidunt quis leo non, sodales sagittis nulla. Proin
+            interdum est at nulla laoreet, pulvinar pretium nisl rutrum. In vel
+            elit a risus rhoncus accumsan vulputate non sapien. Sed et rhoncus
+            velit. Nunc commodo augue fermentum, hendrerit neque at, ullamcorper
+            arcu. Nulla tincidunt orci a lectus efficitur elementum. Donec
+            molestie urna vestibulum augue placerat faucibus. In vitae orci vel
+            mauris cursus viverra ac sit amet nisl. Phasellus odio tortor,
+            ullamcorper eget ullamcorper eget, molestie eget justo. Integer
+            elementum purus eget arcu fermentum tincidunt. Nullam erat tellus,
+            dictum sit amet nisi eu, rutrum fermentum odio.
+          </p>
         </div>
-        <div
-          style="color: #9037c7"
-          class="d-flex justify-content-center col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="alarm.html">Alarm</a>
+        <div class="tab-pane fade" id="sit-amet" role="tabpanel">
+          <h1>Sit Amet</h1>
+
+          <p>
+            Aliquam hendrerit nunc vitae nisi efficitur, eu porta sem aliquam.
+            Aenean tincidunt mi sed mi sodales bibendum. Proin dolor ipsum,
+            mollis venenatis velit eu, iaculis laoreet mi. Mauris eget egestas
+            felis, sit amet finibus nunc. Aliquam non dui sit amet erat auctor
+            mollis ac eget ante. Quisque at quam augue. Nulla dignissim, augue
+            nec cursus consequat, mi nulla efficitur augue, vel fringilla turpis
+            quam eu nunc. Quisque rutrum vehicula lacus sodales molestie. Mauris
+            vel felis sit amet erat maximus cursus ut a velit. In hac habitasse
+            platea dictumst. Vestibulum vel neque sit amet nisl finibus
+            fermentum.
+          </p>
         </div>
-      </div>
-      <!-- navbar end -->
-      <!-- ph card start -->
-      <div class="d-flex justify-content-center">
-      <div class="row mt-5">
-        <div class="col-7 mx-2">
-          <div class="ph_box row p-4">
-            <div class="col-1">
-              <svg
-                width="18"
-                height="158"
-                viewBox="0 0 18 158"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="18" height="158" rx="9" fill="#3CEA43" />
-              </svg>
-            </div>
-            <div class="col-8">
-              <div class="row">
-                <h5 class="phtext mt-2">pH</h5>
-              </div>
-              <div class="row"><div class="ph_value mt-1">7.55</div></div>
-            </div>
-            <div class="col-3 mt-4">
-              <svg
-                width="100%"
-                height="100%"
-                viewBox="0 0 105 102"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect y="57" width="18" height="45" rx="9" fill="#3CEA43" />
-                <rect x="29" width="18" height="102" rx="9" fill="#3CEA43" />
-                <rect
-                  x="58"
-                  y="21"
-                  width="18"
-                  height="81"
-                  rx="9"
-                  fill="#3CEA43"/>
-                <rect
-                  x="87"
-                  y="44"
-                  width="18"
-                  height="58"
-                  rx="9"
-                  fill="#3CEA43"/>
-              </svg>
-            </div>
-          </div>
-          <!-- ph card end -->
-          <!-- temp_volt card start -->
-          <div class="temp_volt row mt-4 p-2">
-            <div class="col-6">
-              <div class="temp_volt_text d-flex justify-content-center">Temperature</div>
-              <div class="temp_volt_value d-flex justify-content-center">23°C</div>
-            </div>
-            <div class="col-6">
-              <div class="temp_volt_text d-flex justify-content-center">Voltage</div>
-              <div class="temp_volt_value d-flex justify-content-center ">4 mV</div>
-            </div>
-          </div>
-          <!-- temp_volt card end -->
-          <!-- reaction card start -->
-          <div class="reaction row mt-4 p-3">
-            <div class="reaction_text">Reaction</div>
-            <hr width="100%">
-            <div class="reaction_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </div>
-            </div>
-          <!-- reaction card end -->
-          <!-- side details card start -->
-        </div>
-        <div class="col-5 mx-2 sidebox">
-          <div class="row">
-            <div class="col-9 px-4">
-              <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">Battery</div>
-              <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">57</div><span style="font-size: 28px;" class="sidebox_text">%</span>
-            </div>
-            <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col-9 px-4">
-              <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">Slope</div>
-              <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">108</div><span style="font-size: 28px;" class="sidebox_text">%</span>
-            </div>
-            <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col-9 px-4">
-              <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">offset</div>
-              <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">0.008</div>
-            </div>
-            <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col-9 px-4">
-              <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">Probes</div>
-              <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">Glass</div>
-            </div>
-            <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
-          </div>
-        </div>
-        <!-- side details card end-->
-      </div>
       </div>
     </div>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+ <script src="js/main.js"></script>
+  </div>
+  <!-- page start -->
+  <div class="main mt-5">
+    <!-- navbar start -->
+    <div class="mynav row">
+      <div
+        style="
+          border-right: 1px dotted black;
+          background: #9037c7;
+          color: white;
+          border-radius: 34px 0px 0px 34px;"
+        class="col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="phmonitor.html">pH Monitor</a>
+      </div>
+      <div
+        style="border-right: 1px dotted black; color: #9037c7"
+        class="col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="caliberation.html">Caliberation</a>
+      </div>
+      <div
+        style="border-right: 1px dotted black; color: #9037c7"
+        class="d-flex justify-content-center col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="Log.html">Log</a>
+      </div>
+      <div
+        style="color: #9037c7"
+        class="d-flex justify-content-center col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="alarm.html">Alarm</a>
+      </div>
+    </div>
+    <!-- navbar end -->
+    <!-- ph card start -->
+    <div class="d-flex justify-content-center">
+    <div class="row mt-5">
+      <div class="col-7 mx-2">
+        <div class="ph_box row p-4">
+          <div class="col-1">
+            <svg
+              width="18"
+              height="158"
+              viewBox="0 0 18 158"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect id="ph_bar" width="18" height="158" rx="9" fill="#3CEA43"/>
+            </svg>
+          </div>
+          <div class="col-8">
+            <div class="row">
+              <h5 class="phtext mt-2">pH</h5>
+            </div>
+            <div class="row"><div id="ph_val" class="ph_value mt-1">10</div></div>
+          </div>
+          <div class="col-3 mt-4">
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 105 102"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect y="57" width="18" height="45" rx="9" fill="#3CEA43" />
+              <rect x="29" width="18" height="102" rx="9" fill="#3CEA43" />
+              <rect
+                x="58"
+                y="21"
+                width="18"
+                height="81"
+                rx="9"
+                fill="#3CEA43"/>
+              <rect
+                x="87"
+                y="44"
+                width="18"
+                height="58"
+                rx="9"
+                fill="#3CEA43"/>
+            </svg>
+          </div>
+        </div>
+        <!-- ph card end -->
+        <!-- temp_volt card start -->
+        <div class="temp_volt row mt-4 p-2">
+          <div class="col-6">
+            <div class="temp_volt_text d-flex justify-content-center">Temperature</div>
+            <div class="temp_volt_value d-flex justify-content-center">23°C</div>
+          </div>
+          <div class="col-6">
+            <div class="temp_volt_text d-flex justify-content-center">Voltage</div>
+            <div class="temp_volt_value d-flex justify-content-center ">4 mV</div>
+          </div>
+        </div>
+        <!-- temp_volt card end -->
+        <!-- reaction card start -->
+        <div class="reaction row mt-4 p-3">
+          <div class="reaction_text">Reaction</div>
+          <hr width="100%">
+          <div class="reaction_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+          </div>
+        <!-- reaction card end -->
+        <!-- side details card start -->
+      </div>
+      <div class="col-5 mx-2 sidebox">
+        <div class="row">
+          <div class="col-9 px-4">
+            <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">Battery</div>
+            <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">57</div><span style="font-size: 28px;" class="sidebox_text">%</span>
+          </div>
+          <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-9 px-4">
+            <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">Slope</div>
+            <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">108</div><span style="font-size: 28px;" class="sidebox_text">%</span>
+          </div>
+          <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-9 px-4">
+            <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">offset</div>
+            <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">0.008</div>
+          </div>
+          <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-9 px-4">
+            <div style="font-size: 24px;font-weight: normal;" class="sidebox_text">Probes</div>
+            <div style="font-size: 50px;font-weight: bold; display: inline;" class="sidebox_text">Glass</div>
+          </div>
+          <div class="col-2"><i style="color: #9FFF87;font-size: 60px" class="fas fa-circle mt-4"></i></div>
+        </div>
+      </div>
+      <!-- side details card end-->
+    </div>
+    </div>
+  </div>
+  <script>
+   function phcolor(){
+     var ele = document.getElementById("ph_bar")
+     var ph = document.getElementById("ph_val")
+     var phtext = ph.textContent
+     if(phtext<1){
+       ele.style.fill = "#da3d75"
+     }
+     else if(phtext<2){
+      ele.style.fill = "#db5580"
+     }
+     else if(phtext<3){
+      ele.style.fill = "#e0658a"
+     }
+     else if(phtext<4){
+      ele.style.fill = "#e2749a"
+     }
+     else if(phtext<5){
+      ele.style.fill = "#e587a7"
+     }
+     else if(phtext<6){
+      ele.style.fill = "#e799b5"
+     }
+     else if(phtext<7){
+      ele.style.fill = "#e7abc1"
+     }
+     else if(phtext<8){
+      ele.style.fill = "#3CEA43"
+     }
+     else if(phtext<9){
+      ele.style.fill = "#8dc4df"
+     }
+     else if(phtext<10){
+      ele.style.fill = "#75bada"
+     }
+     else if(phtext<11){
+      ele.style.fill = "#5fadd2"
+     }
+     else if(phtext<12){
+      ele.style.fill = "#469fcb"
+     }
+     else if(phtext<13){
+      ele.style.fill = "#3293c3"
+     }
+     else if(phtext<14){
+      ele.style.fill = "rgb(54, 134, 185)"
+     }
+     else{
+      ele.style.fill = "rgb(53, 122, 175)"
+     }  
+   }
+   phcolor()
+  </script>
+</body>
 </html>

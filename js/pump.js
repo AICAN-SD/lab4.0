@@ -1,8 +1,9 @@
 function slide(){
     var clock = document.getElementById("clock")
     var anticlock = document.getElementById("anticlock")
-  
-        clock.checked = !clock.checked
-        anticlock.checked= !anticlock.checked
+    // if(clock.checked){
+    //     clock.removeAttribute("checked");
+    //     anticlock.setAttribute("checked")
+    // }
     return false;
 }

@@ -1,88 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossorigin="anonymous"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-          integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-          crossorigin="anonymous"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-          integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-          crossorigin="anonymous"
-        ></script>
-        <link
-          rel="stylesheet"
-          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-          crossorigin="anonymous"
-        />
-        <link rel="stylesheet" type="text/css" href="css/log.css" />
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
-        <title>ProtoLab</title>
-      </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+  integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+  crossorigin="anonymous"
+></script>
+<link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" type="text/css" href="css/log.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+  <script src="js/main.js"></script>
+</head>
 <body>
-  <div class="main">
-      <!-- navbar start -->
-      <div class="mynav row">
-        <div
-          style="
-            border-right: 1px dotted black;
-            color: #9037c7;
-            border-radius: 34px 0px 0px 34px;"
-          class="d-flex justify-content-center col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="phmonitor.html">pH Monitor</a> 
+  <div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <!-- sidebar -->
+  <div id="sidebarMenu">
+    <div class="d-flex flex-row mt-2">
+      <ul
+      class="nav nav-tabs nav-tabs--vertical nav-tabs--left"
+      role="navigation"
+    >
+    <li class="nav-item">
+      <a
+      id = "link4"
+        href="Dashboard.html"
+        class="nav-link pt-3"
+        data-toggle="tab"
+        role="tab"
+        aria-controls="ipsum"
+        >
+        <i style="font-size: 60px;" class="fas fa-home"></i>
+        <h5 class="d-flex justify-content-center mt-2">Home</h5></a
+      >
+    </li>
+      <li onclick="devices()" class="nav-item">
+        <a
+        id = "link1"
+          href="#lorem"
+          class="nav-link active pt-3"
+          data-toggle="tab"
+          role="tab"
+          aria-controls="lorem"
+          >
+          <i style="font-size: 60px;" class="fas fa-layer-group"></i>
+          <h5 class="d-flex justify-content-center mt-2">Devices</h5>
+          </a
+        >
+      </li>
+      <li onclick="setting()"class="nav-item">
+        <a
+        id = "link2"
+          href="#ipsum"
+          class="nav-link pt-3"
+          data-toggle="tab"
+          role="tab"
+          aria-controls="ipsum"
+          >
+          <i style="font-size: 60px;" class="fas fa-cogs"></i>
+          <h5 class="d-flex justify-content-center mt-2">Settings</h5></a
+        >
+      </li>
+      <li onclick="setup()" class="nav-item">
+        <a
+        id = "link3"
+          href="#sit-amet"
+          class="nav-link pt-3"
+          data-toggle="tab"
+          role="tab"
+          aria-controls="sit-amet"
+          >
+          <i style="font-size: 60px;" class="fas fa-signal"></i>
+          <h5 class="d-flex justify-content-center mt-2">Setup</h5> </a
+        >
+      </li>
+    </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="device_c" role="tabpanel">
+          <div style="padding: 20px;" class="row">
+            <div class="col-3 mx-3">
+              <a style="color: inherit;text-decoration: none !important;" href="Peristaltic_Pump.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Peristaltic Pump
+              </h4>
+            </a>
+            </div>
+            <div class="col-3 mx-5">
+              <a style="color: inherit;text-decoration: none !important;" href="temp_c.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Temp. Controller
+              </h4>
+              </a>
+            </div>
+            <div class="col-3 mx-4">
+              <a style="color: inherit;text-decoration: none !important;" href="temp_c.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Temp. Controller
+              </h4>
+              </a>
+            </div>
+            <div class="col-4 mx-2 mt-3">
+              <a style="color: inherit;text-decoration: none !important;" href="phmonitor.html">
+              <div style="width: 150px;
+              height: 150px;
+              left: 299px;
+              top: 183px;
+              
+              background: #FFFFFF;
+              border-radius: 10px;" class="device_box"></div>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+              Ph. Controller
+              </h4>
+            </a>
+            </div>
+            <div class="col-3 mt-3">
+              <i style="font-size: 150px;color: white;" class="far fa-plus-square"></i>
+              <h4 class="mt-2" style="font-family: Droid Sans; font-style: normal;font-weight: bold;font-size: 24px;color: #FFFFFF;white-space: nowrap;">
+                Add Devices
+              </h4>
+            </div>
+          </div>
         </div>
-        <div
-          style="border-left: 1px dotted black; border-right: 1px dotted black; color: #9037c7"
-          class="d-flex justify-content-center col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="caliberation.html">Caliberation</a>
+        <div class="tab-pane fade" id="setting_c" role="tabpanel">
+          <h1 style="color: white;">Settings</h1>
+
+          <p style="color: white;">
+            Aenean pharetra risus quis placerat euismod. Praesent mattis lorem
+            eget massa euismod sollicitudin. Donec porta nulla ut blandit
+            vehicula. Mauris sagittis lorem nec mauris placerat, et molestie
+            elit vehicula. Donec libero ex, condimentum et mi dapibus, euismod
+            ornare ligula.
+          </p>
+
+          <p style="color: white;">
+            In faucibus tempus ante, et tempor magna luctus id. Ut a maximus
+            ipsum. Duis eu velit nec libero pretium pellentesque. Maecenas
+            auctor hendrerit pulvinar. Donec sed tortor interdum, sodales elit
+            vel, tempor turpis. In tristique vestibulum eros vel congue. Vivamus
+            maximus posuere fringilla. Nullam in est commodo, tristique ligula
+            eu, tincidunt enim. Duis iaculis sodales lectus vitae cursus.
+          </p>
         </div>
-        <div
-          style="border-right: 1px dotted black;color: white;background: #9037c7;border-radius: 10px"
-          class="d-flex justify-content-center col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="Log.html">Log</a>
+        <div class="tab-pane fade" id="setup_c" role="tabpanel">
+          <h1 style="color: white;">Setup</h1>
+
+          <p style="color: white;">
+            Ut eget lectus tristique, tempus purus sit amet, porta augue. Mauris
+            lobortis sem nec augue ultricies blandit. Nullam sed sem venenatis,
+            pretium urna eget, scelerisque dolor. Morbi nec volutpat leo, quis
+            faucibus tortor. Aenean vel rutrum mauris. Pellentesque lectus
+            massa, tincidunt quis leo non, sodales sagittis nulla. Proin
+            interdum est at nulla laoreet, pulvinar pretium nisl rutrum. In vel
+            elit a risus rhoncus accumsan vulputate non sapien. Sed et rhoncus
+            velit. Nunc commodo augue fermentum, hendrerit neque at, ullamcorper
+            arcu. Nulla tincidunt orci a lectus efficitur elementum. Donec
+            molestie urna vestibulum augue placerat faucibus. In vitae orci vel
+            mauris cursus viverra ac sit amet nisl. Phasellus odio tortor,
+            ullamcorper eget ullamcorper eget, molestie eget justo. Integer
+            elementum purus eget arcu fermentum tincidunt. Nullam erat tellus,
+            dictum sit amet nisi eu, rutrum fermentum odio.
+          </p>
         </div>
-        <div
-          style="border-left: 1px dotted black;color: #9037c7"
-          class="d-flex justify-content-center col-3 navtext">
-          <a style="color: inherit;text-decoration: none !important;" href="alarm.html">Alarm</a>
+        <div class="tab-pane fade" id="sit-amet" role="tabpanel">
+          <h1>Sit Amet</h1>
+
+          <p>
+            Aliquam hendrerit nunc vitae nisi efficitur, eu porta sem aliquam.
+            Aenean tincidunt mi sed mi sodales bibendum. Proin dolor ipsum,
+            mollis venenatis velit eu, iaculis laoreet mi. Mauris eget egestas
+            felis, sit amet finibus nunc. Aliquam non dui sit amet erat auctor
+            mollis ac eget ante. Quisque at quam augue. Nulla dignissim, augue
+            nec cursus consequat, mi nulla efficitur augue, vel fringilla turpis
+            quam eu nunc. Quisque rutrum vehicula lacus sodales molestie. Mauris
+            vel felis sit amet erat maximus cursus ut a velit. In hac habitasse
+            platea dictumst. Vestibulum vel neque sit amet nisl finibus
+            fermentum.
+          </p>
         </div>
       </div>
-      <!-- navbar end -->
-      <div class="d-flex justify-content-center">
-      <div style="width: 70%; margin: 0 auto;" class="row mt-4">
-          <div class="col-5 log_graph"><canvas id="myChart"></canvas></div>
-          <div class="col-3 d-flex justify-content-center align-items-end"><button onclick="log()" class="button">Log</button></div>
-      </div>
-      </div>
-            <!-- ph table start -->
-            <div class="row mytable mt-5">
-                <table class=" table table-striped">
-                  <thead>
-                    <tr>
-                      <th style="text-align: center;" scope="col">Date</th>
-                      <th style="text-align: center;" scope="col">Time</th>
-                      <th style="text-align: center;" scope="col">pH</th>
-                      <th style="text-align: center;" scope="col">mV</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tablecontent">
-                   
-                  </tbody>
-                </table>
-              </div>
-              <!-- ph table end -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+ <script src="js/main.js"></script>
   </div>
-  <script src="js/log.js"></script>  
+  <!-- page start -->
+  <div class="main mt-5">
+    <!-- navbar start -->
+    <div class="mynav row">
+      <div
+        style="
+          border-right: 1px dotted black;
+          color: #9037c7;
+          border-radius: 34px 0px 0px 34px;"
+        class="d-flex justify-content-center col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="phmonitor.html">pH Monitor</a> 
+      </div>
+      <div
+        style="border-left: 1px dotted black; border-right: 1px dotted black; color: #9037c7"
+        class="d-flex justify-content-center col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="caliberation.html">Caliberation</a>
+      </div>
+      <div
+        style="border-right: 1px dotted black;color: white;background: #9037c7;border-radius: 10px"
+        class="d-flex justify-content-center col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="Log.html">Log</a>
+      </div>
+      <div
+        style="border-left: 1px dotted black;color: #9037c7"
+        class="d-flex justify-content-center col-3 navtext">
+        <a style="color: inherit;text-decoration: none !important;" href="alarm.html">Alarm</a>
+      </div>
+    </div>
+    <!-- navbar end -->
+    <div class="d-flex justify-content-center">
+    <div style="width: 70%; margin: 0 auto;" class="row mt-4">
+        <div class="col-5 log_graph"><canvas id="myChart"></canvas></div>
+        <div class="col-3 d-flex justify-content-center align-items-end"><button onclick="log()" class="button">Log</button></div>
+    </div>
+    </div>
+          <!-- ph table start -->
+          <div class="row mytable mt-5">
+              <table class=" table table-striped">
+                <thead>
+                  <tr>
+                    <th style="text-align: center;" scope="col">Date</th>
+                    <th style="text-align: center;" scope="col">Time</th>
+                    <th style="text-align: center;" scope="col">pH</th>
+                    <th style="text-align: center;" scope="col">mV</th>
+                  </tr>
+                </thead>
+                <tbody id="tablecontent">
+                 
+                </tbody>
+              </table>
+            </div>
+            <!-- ph table end -->
+</div>
+<script src="js/log.js"></script>
 </body>
 </html>
