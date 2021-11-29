@@ -85,20 +85,20 @@ function togglebutton(){
     var timer_text = document.getElementById("timer_text")
     var element = document.getElementById("startb");
     if(element.classList.contains('start')){
-        timer_text.style.display = "block";
-        $('.js-timeout').text("2:00");
-     countdown();
         element.classList.remove('start');
         element.innerHTML="Stop";
         element.classList.add('stop');
+        timer_text.style.display = "block";
+        $('.js-timeout').text("2:00");
+     countdown();
     }
     else{
-        timer_text.style.display = "none";
-        $('.js-timeout').text("2:00");
-     clearInterval(interval);
         element.classList.add('start');
         element.classList.remove('stop');
         element.innerHTML="Start";
+        timer_text.style.display = "none";
+        $('.js-timeout').text("2:00");
+     clearInterval(interval);
     }
 }
 function tableChange(){
