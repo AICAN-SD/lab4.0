@@ -69,7 +69,14 @@
    
          $('.js-timeout').html(minutes + ':' + seconds);
    
-         if (minutes == 0 && seconds == 0) clearInterval(interval);
+         if (minutes == 0 && seconds == 0) {
+            var timer_text = document.getElementById("timer_text")
+            var element = document.getElementById("startb");
+            element.classList.add('start');
+            element.classList.remove('stop');
+            element.innerHTML="Start";
+            timer_text.style.display="none";
+            clearInterval(interval)};
      }, 1000);
    }
 
